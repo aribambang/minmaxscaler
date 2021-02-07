@@ -1,5 +1,3 @@
-# MinMaxScaler
-
 ## What is this?
 
 Transform features by scaling each feature to a given range. Reference from [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler)

@@ -15,10 +15,11 @@ var max_ = 1;
  **/
 function write_params() {
   var fs = require('fs');
+  var path = require('path');
   // Data which will write in a file.
   var data = { X_max: X_max, X_min: X_min, max_: max_, min_: min_ };
 
-  return fs.writeFileSync('minmaxscaler.json', JSON.stringify(data));
+  return fs.writeFileSync(path.resolve(__dirname, 'minmaxscaler.json'), JSON.stringify(data));
 }
 
 /**
@@ -69,7 +70,7 @@ function fit_transform(data, min = 0, max = 1) {
  * @return {Array} X_scaled - Final scaled array fitted within Feature Range.
  **/
 function transform(result) {
-  var fit = require('./minmaxscaler.json');
+  var fit = get_params();
 
   var X_minArr = result.map(function (values) {
     return values - fit.X_min;
@@ -92,7 +93,7 @@ function transform(result) {
  * @return {Array} X_ - Inverse Scaled Array.
  **/
 function inverse_transform(input, min = 0, max = 1) {
-  var fit = require('./minmaxscaler.json');
+  var fit = get_params();
 
   var X = input.map(function (values) {
     return (values - min) / (max - min);
