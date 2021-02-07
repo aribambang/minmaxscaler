@@ -1,0 +1,26 @@
+{
+  "name": "minmaxscaler",
+  "version": "1.0.0",
+  "description": "Transform features by scaling each feature to a given range. References from scikit-learn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aribambang/minmaxscaler.git"
+  },
+  "keywords": [
+    "minmaxscaler",
+    "math",
+    "statistic",
+    "scaler",
+    "scaling"
+  ],
+  "author": "Ari Bambang K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aribambang/minmaxscaler/issues"
+  },
+  "homepage": "https://github.com/aribambang/minmaxscaler#readme"
+}
